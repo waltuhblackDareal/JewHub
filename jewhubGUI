@@ -1,0 +1,250 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local BackgroundImage = Instance.new("ImageLabel")
+local SideBar = Instance.new("Frame")
+local SideLayout = Instance.new("UIListLayout")
+local ContentFrame = Instance.new("Frame")
+local CloseButton = Instance.new("TextButton")
+local ToggleButton = Instance.new("ImageButton")
+
+-- UI Setup
+ScreenGui.Name = "JewHub"
+ScreenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+-- Toggle Button (Middle Top)
+ToggleButton.Name = "ToggleButton"
+ToggleButton.Parent = ScreenGui
+ToggleButton.BackgroundTransparency = 1
+ToggleButton.Position = UDim2.new(0.5, -25, 0, 10)
+ToggleButton.Size = UDim2.new(0, 50, 0, 50)
+ToggleButton.Image = "rbxassetid://12814915326"
+ToggleButton.ZIndex = 50
+Instance.new("UICorner", ToggleButton)
+local ToggleStroke = Instance.new("UIStroke", ToggleButton)
+ToggleStroke.Color = Color3.fromRGB(255, 0, 0)
+ToggleStroke.Thickness = 4
+ToggleButton.MouseButton1Click:Connect(function() MainFrame.Visible = not MainFrame.Visible end)
+
+-- Main Frame
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.Position = UDim2.new(0.5, -200, 0.5, -110)
+MainFrame.Size = UDim2.new(0, 400, 0, 220)
+MainFrame.Active = true
+MainFrame.Draggable = true
+MainFrame.ClipsDescendants = true
+UICorner.CornerRadius = UDim.new(0, 20)
+UICorner.Parent = MainFrame
+
+-- Background Image
+BackgroundImage.Name = "FlagBackground"
+BackgroundImage.Parent = MainFrame
+BackgroundImage.Size = UDim2.new(1, 0, 1, 0)
+BackgroundImage.Image = "rbxassetid://12814915326"
+BackgroundImage.ScaleType = Enum.ScaleType.Stretch
+BackgroundImage.ZIndex = 1
+Instance.new("UICorner", BackgroundImage).CornerRadius = UDim.new(0, 20)
+
+-- SideBar
+SideBar.Name = "SideBar"
+SideBar.Parent = MainFrame
+SideBar.BackgroundColor3 = Color3.fromRGB(0, 56, 184)
+SideBar.BackgroundTransparency = 0.3
+SideBar.Size = UDim2.new(0, 130, 1, 0)
+SideBar.ZIndex = 5
+SideLayout.Parent = SideBar
+SideLayout.Padding = UDim.new(0, 5)
+SideLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+SideLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+SideLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+-- Content Area
+ContentFrame.Name = "ContentFrame"
+ContentFrame.Parent = MainFrame
+ContentFrame.BackgroundTransparency = 1
+ContentFrame.Position = UDim2.new(0, 120, 0, 0)
+ContentFrame.Size = UDim2.new(1, -120, 1, 0)
+ContentFrame.ZIndex = 5
+
+-- Tab Logic
+local Pages = {}
+local function CreateTab(name, order)
+    local TabBtn = Instance.new("TextButton", SideBar)
+    TabBtn.Name = name .. "Btn"
+    TabBtn.LayoutOrder = order
+    TabBtn.Size = UDim2.new(0.9, 0, 0, 32)
+    TabBtn.BackgroundColor3 = Color3.fromRGB(0, 56, 184) -- Blauw passend bij vlag
+    TabBtn.Font = Enum.Font.FredokaOne
+    TabBtn.Text = name:upper()
+    TabBtn.TextColor3 = Color3.new(1, 1, 1) -- WITTE TEKST
+    TabBtn.TextSize = 10
+    TabBtn.ZIndex = 6
+    Instance.new("UICorner", TabBtn)
+    
+    local RedStroke = Instance.new("UIStroke", TabBtn)
+    RedStroke.Color = Color3.fromRGB(255, 0, 0)
+    RedStroke.Thickness = 3
+    
+    local Indicator = Instance.new("Frame", TabBtn)
+    Indicator.Name = "Indicator"
+    Indicator.Size = UDim2.new(0, 8, 1, 0)
+    Indicator.Position = UDim2.new(0, -5, 0, 0)
+    Indicator.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+    Indicator.Visible = false
+    Indicator.ZIndex = 7
+    Instance.new("UICorner", Indicator)
+
+    local Page = Instance.new("Frame", ContentFrame)
+    Page.Name = name .. "Page"
+    Page.Size = UDim2.new(1, 0, 1, 0)
+    Page.BackgroundTransparency = 1
+    Page.Visible = false
+    Page.ZIndex = 6
+    
+    TabBtn.MouseButton1Click:Connect(function()
+        for _, p in pairs(Pages) do p.Visible = false end
+        for _, b in pairs(SideBar:GetChildren()) do 
+            if b:IsA("TextButton") then b.Indicator.Visible = false end 
+        end
+        Page.Visible = true
+        Indicator.Visible = true
+    end)
+    Pages[name] = Page
+    return Page
+end
+
+-- Tabs
+local InfoPage = CreateTab("Jewish Info", 1)
+local MovementPage = CreateTab("Jewish Movement", 2)
+local AllahPage = CreateTab("Allah Akbar", 3)
+local TerrorPage = CreateTab("Terrorism", 4)
+local EwPage = CreateTab("jewish meat beaters", 5)
+
+-- Jewish Info Content
+local CreditText = Instance.new("TextLabel", InfoPage)
+CreditText.Size = UDim2.new(0.8, 0, 0, 80)
+CreditText.Position = UDim2.new(0.1, 0, 0.4, 0)
+CreditText.BackgroundTransparency = 1
+CreditText.Font = Enum.Font.FredokaOne
+CreditText.TextColor3 = Color3.new(1, 1, 1) -- WIT
+CreditText.TextSize = 20
+CreditText.TextWrapped = true
+CreditText.Text = "Made by GeorgeCooperTheReal (Keesert) Shout out to OmegaJew, and PenisJew."
+CreditText.ZIndex = 10
+local CrStroke = Instance.new("UIStroke", CreditText)
+CrStroke.Color = Color3.new(1, 0, 0)
+CrStroke.Thickness = 3
+
+-- Styled Input Helper (Voor Movement)
+local function AddStyledInput(parent, labelText, placeholder, yPos, bgColor)
+    local lbl = Instance.new("TextLabel", parent)
+    lbl.Text = labelText
+    lbl.Font = Enum.Font.FredokaOne
+    lbl.TextSize = 18
+    lbl.TextColor3 = Color3.new(1,1,1)
+    lbl.Position = UDim2.new(0.1, 0, yPos, -25)
+    lbl.Size = UDim2.new(0.8, 0, 0, 20)
+    lbl.BackgroundTransparency = 1
+    lbl.ZIndex = 10
+    Instance.new("UIStroke", lbl).Color = Color3.new(1,0,0)
+
+    local inp = Instance.new("TextBox", parent)
+    inp.PlaceholderText = placeholder
+    inp.PlaceholderColor3 = Color3.fromRGB(200, 200, 200)
+    inp.Position = UDim2.new(0.1, 0, yPos, 0)
+    inp.Size = UDim2.new(0.8, 0, 0, 35)
+    inp.BackgroundColor3 = bgColor
+    inp.TextColor3 = Color3.new(1, 1, 1) -- WITTE TEKST
+    inp.Font = Enum.Font.FredokaOne
+    inp.TextSize = 18
+    inp.Text = ""
+    inp.ZIndex = 10
+    Instance.new("UICorner", inp)
+    local st = Instance.new("UIStroke", inp)
+    st.Color = Color3.new(1,0,0)
+    st.Thickness = 4
+    return inp
+end
+
+local SpeedInp = AddStyledInput(MovementPage, "SPEED", "Enter Speed...", 0.35, Color3.fromRGB(0, 56, 184))
+local JumpInp = AddStyledInput(MovementPage, "JUMP POWER", "Enter Jump...", 0.7, Color3.fromRGB(0, 56, 184))
+
+-- Styled Button Helper (Voor Acties)
+local function CreateStyledButton(parent, text, yPos, url)
+    local btn = Instance.new("TextButton", parent)
+    btn.Text = text:upper()
+    btn.Font = Enum.Font.FredokaOne
+    btn.TextSize = 18
+    btn.TextColor3 = Color3.new(1, 1, 1) -- WITTE TEKST
+    btn.BackgroundColor3 = Color3.fromRGB(0, 56, 184)
+    btn.Size = UDim2.new(0.8, 0, 0, 45)
+    btn.Position = UDim2.new(0.1, 0, yPos, 0)
+    btn.ZIndex = 10
+    Instance.new("UICorner", btn)
+    local bStroke = Instance.new("UIStroke", btn)
+    bStroke.Color = Color3.new(1, 0, 0)
+    bStroke.Thickness = 4
+    btn.MouseButton1Click:Connect(function() loadstring(game:HttpGet(url))() end)
+end
+
+CreateStyledButton(AllahPage, "9/11 Kamikaze", 0.35, "https://raw.githubusercontent.com/SVG-CARLOS/I-spent-soo-much-time-making-this-script-that-I-cant-make-a-good-title/refs/heads/main/Invisfling")
+CreateStyledButton(AllahPage, "Osama Bin WALK", 0.6, "https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt")
+CreateStyledButton(TerrorPage, "Jewish Ceremony", 0.4, "https://raw.githubusercontent.com/chesslovers69/Super-ring-parts-v6/refs/heads/main/Bylukaslol")
+CreateStyledButton(EwPage, "Jerk4Kirk (r6)", 0.35, "https://pastefy.app/wa3v2Vgm/raw")
+CreateStyledButton(EwPage, "Jerk4Kirk (r15)", 0.6, "https://pastefy.app/YZoglOyJ/raw")
+
+-- Title (JEW HUB)
+local TitleCon = Instance.new("Frame", ContentFrame)
+TitleCon.BackgroundTransparency = 1
+TitleCon.Position = UDim2.new(0, 0, 0, 10)
+TitleCon.Size = UDim2.new(1, 0, 0, 45)
+TitleCon.ZIndex = 10
+Instance.new("UIListLayout", TitleCon).FillDirection = Enum.FillDirection.Horizontal
+TitleCon.UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+
+local titleStr = "JEW HUB"
+for i = 1, #titleStr do
+    local l = Instance.new("TextLabel", TitleCon)
+    l.Text = titleStr:sub(i,i)
+    l.Size = UDim2.new(0, 25, 1, 0)
+    l.BackgroundTransparency = 1
+    l.Font = Enum.Font.FredokaOne
+    l.TextSize = 35
+    l.TextColor3 = (i % 2 == 0) and Color3.new(1,1,1) or Color3.fromRGB(0, 56, 184)
+    local s = Instance.new("UIStroke", l)
+    s.Thickness = 4
+    s.Color = Color3.new(1,0,0)
+end
+
+-- Close Button
+CloseButton.Parent = MainFrame
+CloseButton.BackgroundColor3 = Color3.new(1, 0, 0)
+CloseButton.Position = UDim2.new(1, -35, 0, 5)
+CloseButton.Size = UDim2.new(0, 30, 0, 30)
+CloseButton.Font = Enum.Font.FredokaOne
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.new(1,1,1)
+CloseButton.ZIndex = 20
+Instance.new("UICorner", CloseButton)
+CloseButton.MouseButton1Click:Connect(function() ScreenGui:Destroy() end)
+
+-- Script Logic
+local function apply()
+    local hum = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid")
+    if hum then
+        if tonumber(SpeedInp.Text) then hum.WalkSpeed = tonumber(SpeedInp.Text) end
+        if tonumber(JumpInp.Text) then hum.UseJumpPower = true hum.JumpPower = tonumber(JumpInp.Text) end
+    end
+end
+SpeedInp.FocusLost:Connect(function(e) if e then apply() end end)
+JumpInp.FocusLost:Connect(function(e) if e then apply() end end)
+
+-- Initial State
+InfoPage.Visible = true
+SideBar:FindFirstChild("Jewish InfoBtn").Indicator.Visible = true
