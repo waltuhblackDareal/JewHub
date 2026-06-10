@@ -1,250 +1,1182 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 91 | Scripts: 0 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.JEWHUB
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[JEWHUB]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"].ResetOnSpawn = false
+
+
+-- StarterGui.JEWHUB.menugui
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 225, 240);
+G2L["2"]["Size"] = UDim2.new(0, 523, 0, 357);
+G2L["2"]["Position"] = UDim2.new(0.2903, 0, 0.30619, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[menugui]];
+
+
+-- StarterGui.JEWHUB.menugui.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel
+G2L["4"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["Image"] = [[rbxassetid://12814915326]];
+G2L["4"]["Size"] = UDim2.new(0, 523, 0, 357);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Position"] = UDim2.new(-0.00063, 0, -0.00172, 0);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+G2L["5"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.UIStroke
+G2L["6"] = Instance.new("UIStroke", G2L["4"]);
+G2L["6"]["Thickness"] = 2;
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.j
+G2L["7"] = Instance.new("TextLabel", G2L["4"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextSize"] = 75;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 85, 0);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["BackgroundTransparency"] = 100;
+G2L["7"]["Size"] = UDim2.new(0, 192, 0, 49);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[J]];
+G2L["7"]["Name"] = [[j]];
+G2L["7"]["Position"] = UDim2.new(0.09369, 0, -0.07283, 0);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.j.UIStroke
+G2L["8"] = Instance.new("UIStroke", G2L["7"]);
+G2L["8"]["Color"] = Color3.fromRGB(255, 0, 7);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.e
+G2L["9"] = Instance.new("TextLabel", G2L["4"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextSize"] = 75;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 85, 0);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["9"]["BackgroundTransparency"] = 100;
+G2L["9"]["Size"] = UDim2.new(0, 192, 0, 49);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[E]];
+G2L["9"]["Name"] = [[e]];
+G2L["9"]["Position"] = UDim2.new(0.15105, 0, -0.07283, 0);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.e.UIStroke
+G2L["a"] = Instance.new("UIStroke", G2L["9"]);
+G2L["a"]["Color"] = Color3.fromRGB(255, 0, 7);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.w
+G2L["b"] = Instance.new("TextLabel", G2L["4"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextSize"] = 75;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 85, 0);
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["BackgroundTransparency"] = 100;
+G2L["b"]["Size"] = UDim2.new(0, 191, 0, 49);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[W]];
+G2L["b"]["Name"] = [[w]];
+G2L["b"]["Position"] = UDim2.new(0.24665, 0, -0.07283, 0);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.w.UIStroke
+G2L["c"] = Instance.new("UIStroke", G2L["b"]);
+G2L["c"]["Color"] = Color3.fromRGB(255, 0, 7);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.h
+G2L["d"] = Instance.new("TextLabel", G2L["4"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 75;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 85, 0);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["d"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["d"]["BackgroundTransparency"] = 100;
+G2L["d"]["Size"] = UDim2.new(0, 191, 0, 49);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[H]];
+G2L["d"]["Name"] = [[h]];
+G2L["d"]["Position"] = UDim2.new(0.37285, 0, -0.07283, 0);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.h.UIStroke
+G2L["e"] = Instance.new("UIStroke", G2L["d"]);
+G2L["e"]["Color"] = Color3.fromRGB(255, 0, 7);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.u
+G2L["f"] = Instance.new("TextLabel", G2L["4"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["TextSize"] = 75;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 85, 0);
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["BackgroundTransparency"] = 100;
+G2L["f"]["Size"] = UDim2.new(0, 191, 0, 49);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Text"] = [[U]];
+G2L["f"]["Name"] = [[u]];
+G2L["f"]["Position"] = UDim2.new(0.4608, 0, -0.07283, 0);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.u.UIStroke
+G2L["10"] = Instance.new("UIStroke", G2L["f"]);
+G2L["10"]["Color"] = Color3.fromRGB(255, 0, 7);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.b
+G2L["11"] = Instance.new("TextLabel", G2L["4"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["TextSize"] = 75;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 85, 0);
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["11"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["11"]["BackgroundTransparency"] = 100;
+G2L["11"]["Size"] = UDim2.new(0, 191, 0, 49);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Text"] = [[B]];
+G2L["11"]["Name"] = [[b]];
+G2L["11"]["Position"] = UDim2.new(0.5392, 0, -0.07283, 0);
+
+
+-- StarterGui.JEWHUB.menugui.ImageLabel.b.UIStroke
+G2L["12"] = Instance.new("UIStroke", G2L["11"]);
+G2L["12"]["Color"] = Color3.fromRGB(255, 0, 7);
+
+
+-- StarterGui.JEWHUB.menugui.UIStroke
+G2L["13"] = Instance.new("UIStroke", G2L["2"]);
+G2L["13"]["Thickness"] = 5;
+G2L["13"]["Color"] = Color3.fromRGB(105, 0, 0);
+
+
+-- StarterGui.JEWHUB.menugui.sidebar
+G2L["14"] = Instance.new("Frame", G2L["2"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(0, 95, 185);
+G2L["14"]["Size"] = UDim2.new(0, 122, 0, 357);
+G2L["14"]["Position"] = UDim2.new(0, 0, -0.00172, 0);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Name"] = [[sidebar]];
+G2L["14"]["BackgroundTransparency"] = 0.55;
+
+
+-- StarterGui.JEWHUB.menugui.sidebar.UICorner
+G2L["15"] = Instance.new("UICorner", G2L["14"]);
+G2L["15"]["CornerRadius"] = UDim.new(0.1, 0);
+
+
+-- StarterGui.JEWHUB.menugui.currentjew:
+G2L["16"] = Instance.new("TextLabel", G2L["2"]);
+G2L["16"]["LineHeight"] = 3;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextSize"] = 14;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["BackgroundTransparency"] = 1;
+G2L["16"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Text"] = [[CURRENT JEW:]];
+G2L["16"]["Name"] = [[currentjew:]];
+G2L["16"]["Position"] = UDim2.new(-0.07457, 0, -0.01961, 0);
+
+
+-- StarterGui.JEWHUB.menugui.currentjew:.UIStroke
+G2L["17"] = Instance.new("UIStroke", G2L["16"]);
+G2L["17"]["Color"] = Color3.fromRGB(156, 0, 8);
+
+
+-- StarterGui.JEWHUB.menugui.playeravataricon
+G2L["18"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["18"]["Size"] = UDim2.new(0, 50, 0, 50);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Name"] = [[playeravataricon]];
+G2L["18"]["Position"] = UDim2.new(0.06883, 0, 0.09244, 0);
+
+
+-- StarterGui.JEWHUB.menugui.playeravataricon.UICorner
+G2L["19"] = Instance.new("UICorner", G2L["18"]);
+G2L["19"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.JEWHUB.menugui.playeravataricon.UIStroke
+G2L["1a"] = Instance.new("UIStroke", G2L["18"]);
+G2L["1a"]["Color"] = Color3.fromRGB(255, 0, 29);
+
+
+-- StarterGui.JEWHUB.menugui.madeby
+G2L["1b"] = Instance.new("TextLabel", G2L["2"]);
+G2L["1b"]["LineHeight"] = 3;
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["TextSize"] = 9;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["BackgroundTransparency"] = 1;
+G2L["1b"]["Size"] = UDim2.new(0, 289, 0, 57);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Text"] = [[MADE BY: GeorgeCooperThereal AKA keesert]];
+G2L["1b"]["Name"] = [[madeby]];
+G2L["1b"]["Position"] = UDim2.new(0.22371, 0, 0, 0);
+
+
+-- StarterGui.JEWHUB.menugui.madeby.UIStroke
+G2L["1c"] = Instance.new("UIStroke", G2L["1b"]);
+G2L["1c"]["Color"] = Color3.fromRGB(156, 0, 8);
+
+
+-- StarterGui.JEWHUB.menugui.uidestruct
+G2L["1d"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["Image"] = [[rbxassetid://6860832738]];
+G2L["1d"]["Size"] = UDim2.new(0, 25, 0, 25);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Name"] = [[uidestruct]];
+G2L["1d"]["Position"] = UDim2.new(0.98279, 0, -0.04202, 0);
+
+
+-- StarterGui.JEWHUB.menugui.uidestruct.UICorner
+G2L["1e"] = Instance.new("UICorner", G2L["1d"]);
+G2L["1e"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.JEWHUB.menugui.uidestruct.UIStroke
+G2L["1f"] = Instance.new("UIStroke", G2L["1d"]);
+G2L["1f"]["Color"] = Color3.fromRGB(255, 0, 29);
+
+
+-- StarterGui.JEWHUB.ToggleMenu
+G2L["20"] = Instance.new("ImageLabel", G2L["1"]);
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["Image"] = [[rbxassetid://13023877249]];
+G2L["20"]["Size"] = UDim2.new(0, 79, 0, 79);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Name"] = [[ToggleMenu]];
+G2L["20"]["Position"] = UDim2.new(0.46752, 0, 0.02497, 0);
+
+
+-- StarterGui.JEWHUB.ToggleMenu.UICorner
+G2L["21"] = Instance.new("UICorner", G2L["20"]);
+G2L["21"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.JEWHUB.ToggleMenu.UIStroke
+G2L["22"] = Instance.new("UIStroke", G2L["20"]);
+G2L["22"]["Color"] = Color3.fromRGB(255, 12, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons
+G2L["23"] = Instance.new("ScreenGui", G2L["1"]);
+G2L["23"]["Name"] = [[sectionbuttons]];
+G2L["23"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton1
+G2L["24"] = Instance.new("Frame", G2L["23"]);
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["Size"] = UDim2.new(0, 115, 0, 32);
+G2L["24"]["Position"] = UDim2.new(0.2927, 0, 0.40499, 0);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Name"] = [[sectionbutton1]];
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton1.UIStroke
+G2L["25"] = Instance.new("UIStroke", G2L["24"]);
+G2L["25"]["Thickness"] = 1.5;
+G2L["25"]["Color"] = Color3.fromRGB(198, 5, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton1.UICorner
+G2L["26"] = Instance.new("UICorner", G2L["24"]);
+
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton1.TextLabel
+G2L["27"] = Instance.new("TextLabel", G2L["24"]);
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["TextSize"] = 14;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["27"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["27"]["Size"] = UDim2.new(0, 96, 0, 18);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["Text"] = [[ALLAH AKBAR]];
+G2L["27"]["Position"] = UDim2.new(0.08696, 0, 0.21875, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton1.TextLabel.UIStroke
+G2L["28"] = Instance.new("UIStroke", G2L["27"]);
+G2L["28"]["Thickness"] = 0.5;
+G2L["28"]["Color"] = Color3.fromRGB(255, 15, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton2
+G2L["29"] = Instance.new("Frame", G2L["23"]);
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["Size"] = UDim2.new(0, 115, 0, 32);
+G2L["29"]["Position"] = UDim2.new(0.2927, 0, 0.44734, 0);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Name"] = [[sectionbutton2]];
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton2.UIStroke
+G2L["2a"] = Instance.new("UIStroke", G2L["29"]);
+G2L["2a"]["Thickness"] = 1.5;
+G2L["2a"]["Color"] = Color3.fromRGB(198, 5, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton2.UICorner
+G2L["2b"] = Instance.new("UICorner", G2L["29"]);
+
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton2.TextLabel
+G2L["2c"] = Instance.new("TextLabel", G2L["29"]);
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["TextSize"] = 14;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2c"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["2c"]["Size"] = UDim2.new(0, 96, 0, 18);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Text"] = [[TERRORISM]];
+G2L["2c"]["Position"] = UDim2.new(0.08696, 0, 0.21875, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton2.TextLabel.UIStroke
+G2L["2d"] = Instance.new("UIStroke", G2L["2c"]);
+G2L["2d"]["Thickness"] = 0.5;
+G2L["2d"]["Color"] = Color3.fromRGB(255, 15, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton3
+G2L["2e"] = Instance.new("Frame", G2L["23"]);
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["Size"] = UDim2.new(0, 115, 0, 32);
+G2L["2e"]["Position"] = UDim2.new(0.2927, 0, 0.49077, 0);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Name"] = [[sectionbutton3]];
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton3.UIStroke
+G2L["2f"] = Instance.new("UIStroke", G2L["2e"]);
+G2L["2f"]["Thickness"] = 1.5;
+G2L["2f"]["Color"] = Color3.fromRGB(198, 5, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton3.UICorner
+G2L["30"] = Instance.new("UICorner", G2L["2e"]);
+
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton3.TextLabel
+G2L["31"] = Instance.new("TextLabel", G2L["2e"]);
+G2L["31"]["BorderSizePixel"] = 0;
+G2L["31"]["TextSize"] = 14;
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["31"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["31"]["Size"] = UDim2.new(0, 96, 0, 18);
+G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["31"]["Text"] = [[JERK JEWS]];
+G2L["31"]["Position"] = UDim2.new(0.08696, 0, 0.21875, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton3.TextLabel.UIStroke
+G2L["32"] = Instance.new("UIStroke", G2L["31"]);
+G2L["32"]["Thickness"] = 0.5;
+G2L["32"]["Color"] = Color3.fromRGB(255, 15, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton4
+G2L["33"] = Instance.new("Frame", G2L["23"]);
+G2L["33"]["BorderSizePixel"] = 0;
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["Size"] = UDim2.new(0, 115, 0, 32);
+G2L["33"]["Position"] = UDim2.new(0.2927, 0, 0.5342, 0);
+G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["33"]["Name"] = [[sectionbutton4]];
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton4.UIStroke
+G2L["34"] = Instance.new("UIStroke", G2L["33"]);
+G2L["34"]["Thickness"] = 1.5;
+G2L["34"]["Color"] = Color3.fromRGB(198, 5, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton4.UICorner
+G2L["35"] = Instance.new("UICorner", G2L["33"]);
+
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton4.TextLabel
+G2L["36"] = Instance.new("TextLabel", G2L["33"]);
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["TextSize"] = 14;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["36"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["36"]["Size"] = UDim2.new(0, 96, 0, 18);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Text"] = [[JEWISH EMOTES]];
+G2L["36"]["Position"] = UDim2.new(0.08696, 0, 0.21875, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton4.TextLabel.UIStroke
+G2L["37"] = Instance.new("UIStroke", G2L["36"]);
+G2L["37"]["Thickness"] = 0.5;
+G2L["37"]["Color"] = Color3.fromRGB(255, 15, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton5
+G2L["38"] = Instance.new("Frame", G2L["23"]);
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["Size"] = UDim2.new(0, 115, 0, 32);
+G2L["38"]["Position"] = UDim2.new(0.2927, 0, 0.57763, 0);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Name"] = [[sectionbutton5]];
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton5.UIStroke
+G2L["39"] = Instance.new("UIStroke", G2L["38"]);
+G2L["39"]["Thickness"] = 1.5;
+G2L["39"]["Color"] = Color3.fromRGB(198, 5, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton5.UICorner
+G2L["3a"] = Instance.new("UICorner", G2L["38"]);
+
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton5.TextLabel
+G2L["3b"] = Instance.new("TextLabel", G2L["38"]);
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["TextSize"] = 14;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["3b"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["3b"]["Size"] = UDim2.new(0, 96, 0, 18);
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Text"] = [[HIJACK.EXE]];
+G2L["3b"]["Position"] = UDim2.new(0.08696, 0, 0.21875, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton5.TextLabel.UIStroke
+G2L["3c"] = Instance.new("UIStroke", G2L["3b"]);
+G2L["3c"]["Thickness"] = 0.5;
+G2L["3c"]["Color"] = Color3.fromRGB(255, 15, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton6
+G2L["3d"] = Instance.new("Frame", G2L["23"]);
+G2L["3d"]["BorderSizePixel"] = 0;
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["Size"] = UDim2.new(0, 115, 0, 32);
+G2L["3d"]["Position"] = UDim2.new(0.2927, 0, 0.62106, 0);
+G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3d"]["Name"] = [[sectionbutton6]];
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton6.UIStroke
+G2L["3e"] = Instance.new("UIStroke", G2L["3d"]);
+G2L["3e"]["Thickness"] = 1.5;
+G2L["3e"]["Color"] = Color3.fromRGB(198, 5, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton6.UICorner
+G2L["3f"] = Instance.new("UICorner", G2L["3d"]);
+
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton6.TextLabel
+G2L["40"] = Instance.new("TextLabel", G2L["3d"]);
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["TextSize"] = 14;
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["40"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["40"]["Size"] = UDim2.new(0, 96, 0, 18);
+G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["Text"] = [[JEW GOD]];
+G2L["40"]["Position"] = UDim2.new(0.08696, 0, 0.21875, 0);
+
+
+-- StarterGui.JEWHUB.sectionbuttons.sectionbutton6.TextLabel.UIStroke
+G2L["41"] = Instance.new("UIStroke", G2L["40"]);
+G2L["41"]["Thickness"] = 0.5;
+G2L["41"]["Color"] = Color3.fromRGB(255, 15, 0);
+
+
+-- StarterGui.JEWHUB.buttons
+G2L["42"] = Instance.new("ScreenGui", G2L["1"]);
+G2L["42"]["Name"] = [[buttons]];
+G2L["42"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.JEWHUB.buttons.button4
+G2L["43"] = Instance.new("Frame", G2L["42"]);
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["43"]["Size"] = UDim2.new(0, 295, 0, 37);
+G2L["43"]["Position"] = UDim2.new(0.39294, 0, 0.52109, 0);
+G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Name"] = [[button4]];
+
+
+-- StarterGui.JEWHUB.buttons.button4.UIStroke
+G2L["44"] = Instance.new("UIStroke", G2L["43"]);
+G2L["44"]["Thickness"] = 1.5;
+G2L["44"]["Color"] = Color3.fromRGB(198, 5, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button4.UICorner
+G2L["45"] = Instance.new("UICorner", G2L["43"]);
+
+
+
+-- StarterGui.JEWHUB.buttons.button4.TextLabel
+G2L["46"] = Instance.new("TextLabel", G2L["43"]);
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["TextSize"] = 14;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["46"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["46"]["Size"] = UDim2.new(0, 59, 0, 18);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Text"] = [[Label4]];
+G2L["46"]["Position"] = UDim2.new(0.02075, 0, 0.30386, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button4.TextLabel.UIStroke
+G2L["47"] = Instance.new("UIStroke", G2L["46"]);
+G2L["47"]["Thickness"] = 0.5;
+G2L["47"]["Color"] = Color3.fromRGB(255, 15, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button5
+G2L["48"] = Instance.new("Frame", G2L["42"]);
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["Size"] = UDim2.new(0, 295, 0, 37);
+G2L["48"]["Position"] = UDim2.new(0.39294, 0, 0.57152, 0);
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Name"] = [[button5]];
+
+
+-- StarterGui.JEWHUB.buttons.button5.UIStroke
+G2L["49"] = Instance.new("UIStroke", G2L["48"]);
+G2L["49"]["Thickness"] = 1.5;
+G2L["49"]["Color"] = Color3.fromRGB(198, 5, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button5.UICorner
+G2L["4a"] = Instance.new("UICorner", G2L["48"]);
+
+
+
+-- StarterGui.JEWHUB.buttons.button5.TextLabel
+G2L["4b"] = Instance.new("TextLabel", G2L["48"]);
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["TextSize"] = 14;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4b"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["4b"]["Size"] = UDim2.new(0, 59, 0, 18);
+G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["Text"] = [[Label5]];
+G2L["4b"]["Position"] = UDim2.new(0.02075, 0, 0.30386, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button5.TextLabel.UIStroke
+G2L["4c"] = Instance.new("UIStroke", G2L["4b"]);
+G2L["4c"]["Thickness"] = 0.5;
+G2L["4c"]["Color"] = Color3.fromRGB(255, 15, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button3
+G2L["4d"] = Instance.new("Frame", G2L["42"]);
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["Size"] = UDim2.new(0, 295, 0, 37);
+G2L["4d"]["Position"] = UDim2.new(0.39294, 0, 0.47414, 0);
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Name"] = [[button3]];
+
+
+-- StarterGui.JEWHUB.buttons.button3.UIStroke
+G2L["4e"] = Instance.new("UIStroke", G2L["4d"]);
+G2L["4e"]["Thickness"] = 1.5;
+G2L["4e"]["Color"] = Color3.fromRGB(198, 5, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button3.UICorner
+G2L["4f"] = Instance.new("UICorner", G2L["4d"]);
+
+
+
+-- StarterGui.JEWHUB.buttons.button3.TextLabel
+G2L["50"] = Instance.new("TextLabel", G2L["4d"]);
+G2L["50"]["BorderSizePixel"] = 0;
+G2L["50"]["TextSize"] = 14;
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["50"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["50"]["Size"] = UDim2.new(0, 59, 0, 18);
+G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["Text"] = [[Label3]];
+G2L["50"]["Position"] = UDim2.new(0.02075, 0, 0.30386, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button3.TextLabel.UIStroke
+G2L["51"] = Instance.new("UIStroke", G2L["50"]);
+G2L["51"]["Thickness"] = 0.5;
+G2L["51"]["Color"] = Color3.fromRGB(255, 15, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button2
+G2L["52"] = Instance.new("Frame", G2L["42"]);
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["Size"] = UDim2.new(0, 295, 0, 37);
+G2L["52"]["Position"] = UDim2.new(0.39294, 0, 0.42632, 0);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Name"] = [[button2]];
+
+
+-- StarterGui.JEWHUB.buttons.button2.UIStroke
+G2L["53"] = Instance.new("UIStroke", G2L["52"]);
+G2L["53"]["Thickness"] = 1.5;
+G2L["53"]["Color"] = Color3.fromRGB(198, 5, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button2.UICorner
+G2L["54"] = Instance.new("UICorner", G2L["52"]);
+
+
+
+-- StarterGui.JEWHUB.buttons.button2.TextLabel
+G2L["55"] = Instance.new("TextLabel", G2L["52"]);
+G2L["55"]["BorderSizePixel"] = 0;
+G2L["55"]["TextSize"] = 14;
+G2L["55"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["55"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["55"]["Size"] = UDim2.new(0, 59, 0, 18);
+G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["55"]["Text"] = [[Label2]];
+G2L["55"]["Position"] = UDim2.new(0.02075, 0, 0.30386, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button2.TextLabel.UIStroke
+G2L["56"] = Instance.new("UIStroke", G2L["55"]);
+G2L["56"]["Thickness"] = 0.5;
+G2L["56"]["Color"] = Color3.fromRGB(255, 15, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button1
+G2L["57"] = Instance.new("Frame", G2L["42"]);
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["Size"] = UDim2.new(0, 295, 0, 37);
+G2L["57"]["Position"] = UDim2.new(0.39294, 0, 0.37676, 0);
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["Name"] = [[button1]];
+
+
+-- StarterGui.JEWHUB.buttons.button1.UIStroke
+G2L["58"] = Instance.new("UIStroke", G2L["57"]);
+G2L["58"]["Thickness"] = 1.5;
+G2L["58"]["Color"] = Color3.fromRGB(198, 5, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button1.UICorner
+G2L["59"] = Instance.new("UICorner", G2L["57"]);
+
+
+
+-- StarterGui.JEWHUB.buttons.button1.TextLabel
+G2L["5a"] = Instance.new("TextLabel", G2L["57"]);
+G2L["5a"]["BorderSizePixel"] = 0;
+G2L["5a"]["TextSize"] = 14;
+G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Merriweather.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["5a"]["TextColor3"] = Color3.fromRGB(0, 57, 185);
+G2L["5a"]["Size"] = UDim2.new(0, 59, 0, 18);
+G2L["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5a"]["Text"] = [[Label1]];
+G2L["5a"]["Position"] = UDim2.new(0.02075, 0, 0.30386, 0);
+
+
+-- StarterGui.JEWHUB.buttons.button1.TextLabel.UIStroke
+G2L["5b"] = Instance.new("UIStroke", G2L["5a"]);
+G2L["5b"]["Thickness"] = 0.5;
+G2L["5b"]["Color"] = Color3.fromRGB(255, 15, 0);
+
+
+
+-- Services
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
-local ScreenGui = Instance.new("ScreenGui")
-local MainFrame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local BackgroundImage = Instance.new("ImageLabel")
-local SideBar = Instance.new("Frame")
-local SideLayout = Instance.new("UIListLayout")
-local ContentFrame = Instance.new("Frame")
-local CloseButton = Instance.new("TextButton")
+---------------------------------------------------
+-- Set player's avatar icon
+---------------------------------------------------
+
+local userId = LocalPlayer.UserId
+local imageType = Enum.ThumbnailType.HeadShot
+local imageSize = Enum.ThumbnailSize.Size420x420
+
+local content, isReady = Players:GetUserThumbnailAsync(userId, imageType, imageSize)
+
+G2L["18"].Image = content
+
+---------------------------------------------------
+-- Make uidestruct clickable
+---------------------------------------------------
+
+local CloseButton = Instance.new("ImageButton")
+CloseButton.Name = "uidestruct"
+CloseButton.Size = G2L["1d"].Size
+CloseButton.Position = G2L["1d"].Position
+CloseButton.Image = G2L["1d"].Image
+CloseButton.BackgroundTransparency = 1
+CloseButton.Parent = G2L["2"]
+
+G2L["1d"]:Destroy()
+
+---------------------------------------------------
+-- Make ToggleMenu clickable
+---------------------------------------------------
+
 local ToggleButton = Instance.new("ImageButton")
-
--- UI Setup
-ScreenGui.Name = "JewHub"
-ScreenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ResetOnSpawn = false
-
--- Toggle Button (Middle Top)
-ToggleButton.Name = "ToggleButton"
-ToggleButton.Parent = ScreenGui
+ToggleButton.Name = "ToggleMenu"
+ToggleButton.Size = G2L["20"].Size
+ToggleButton.Position = G2L["20"].Position
+ToggleButton.Image = G2L["20"].Image
 ToggleButton.BackgroundTransparency = 1
-ToggleButton.Position = UDim2.new(0.5, -25, 0, 10)
-ToggleButton.Size = UDim2.new(0, 50, 0, 50)
-ToggleButton.Image = "rbxassetid://12814915326"
-ToggleButton.ZIndex = 50
-Instance.new("UICorner", ToggleButton)
-local ToggleStroke = Instance.new("UIStroke", ToggleButton)
-ToggleStroke.Color = Color3.fromRGB(255, 0, 0)
-ToggleStroke.Thickness = 4
-ToggleButton.MouseButton1Click:Connect(function() MainFrame.Visible = not MainFrame.Visible end)
+ToggleButton.Parent = G2L["1"]
 
--- Main Frame
-MainFrame.Name = "MainFrame"
-MainFrame.Parent = ScreenGui
-MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MainFrame.Position = UDim2.new(0.5, -200, 0.5, -110)
-MainFrame.Size = UDim2.new(0, 400, 0, 220)
-MainFrame.Active = true
-MainFrame.Draggable = true
-MainFrame.ClipsDescendants = true
-UICorner.CornerRadius = UDim.new(0, 20)
-UICorner.Parent = MainFrame
+G2L["20"]:Destroy()
 
--- Background Image
-BackgroundImage.Name = "FlagBackground"
-BackgroundImage.Parent = MainFrame
-BackgroundImage.Size = UDim2.new(1, 0, 1, 0)
-BackgroundImage.Image = "rbxassetid://12814915326"
-BackgroundImage.ScaleType = Enum.ScaleType.Stretch
-BackgroundImage.ZIndex = 1
-Instance.new("UICorner", BackgroundImage).CornerRadius = UDim.new(0, 20)
+---------------------------------------------------
+-- Toggle menu visibility
+---------------------------------------------------
 
--- SideBar
-SideBar.Name = "SideBar"
-SideBar.Parent = MainFrame
-SideBar.BackgroundColor3 = Color3.fromRGB(0, 56, 184)
-SideBar.BackgroundTransparency = 0.3
-SideBar.Size = UDim2.new(0, 130, 1, 0)
-SideBar.ZIndex = 5
-SideLayout.Parent = SideBar
-SideLayout.Padding = UDim.new(0, 5)
-SideLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-SideLayout.VerticalAlignment = Enum.VerticalAlignment.Center
-SideLayout.SortOrder = Enum.SortOrder.LayoutOrder
+ToggleButton.MouseButton1Click:Connect(function()
+	local MenuVisible = not G2L["2"].Visible
 
--- Content Area
-ContentFrame.Name = "ContentFrame"
-ContentFrame.Parent = MainFrame
-ContentFrame.BackgroundTransparency = 1
-ContentFrame.Position = UDim2.new(0, 120, 0, 0)
-ContentFrame.Size = UDim2.new(1, -120, 1, 0)
-ContentFrame.ZIndex = 5
+	-- Main menu
+	G2L["2"].Visible = MenuVisible
 
--- Tab Logic
-local Pages = {}
-local function CreateTab(name, order)
-    local TabBtn = Instance.new("TextButton", SideBar)
-    TabBtn.Name = name .. "Btn"
-    TabBtn.LayoutOrder = order
-    TabBtn.Size = UDim2.new(0.9, 0, 0, 32)
-    TabBtn.BackgroundColor3 = Color3.fromRGB(0, 56, 184) -- Blauw passend bij vlag
-    TabBtn.Font = Enum.Font.FredokaOne
-    TabBtn.Text = name:upper()
-    TabBtn.TextColor3 = Color3.new(1, 1, 1) -- WITTE TEKST
-    TabBtn.TextSize = 10
-    TabBtn.ZIndex = 6
-    Instance.new("UICorner", TabBtn)
-    
-    local RedStroke = Instance.new("UIStroke", TabBtn)
-    RedStroke.Color = Color3.fromRGB(255, 0, 0)
-    RedStroke.Thickness = 3
-    
-    local Indicator = Instance.new("Frame", TabBtn)
-    Indicator.Name = "Indicator"
-    Indicator.Size = UDim2.new(0, 8, 1, 0)
-    Indicator.Position = UDim2.new(0, -5, 0, 0)
-    Indicator.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-    Indicator.Visible = false
-    Indicator.ZIndex = 7
-    Instance.new("UICorner", Indicator)
+	-- Section buttons ScreenGui
+	G2L["23"].Enabled = MenuVisible
 
-    local Page = Instance.new("Frame", ContentFrame)
-    Page.Name = name .. "Page"
-    Page.Size = UDim2.new(1, 0, 1, 0)
-    Page.BackgroundTransparency = 1
-    Page.Visible = false
-    Page.ZIndex = 6
-    
-    TabBtn.MouseButton1Click:Connect(function()
-        for _, p in pairs(Pages) do p.Visible = false end
-        for _, b in pairs(SideBar:GetChildren()) do 
-            if b:IsA("TextButton") then b.Indicator.Visible = false end 
-        end
-        Page.Visible = true
-        Indicator.Visible = true
-    end)
-    Pages[name] = Page
-    return Page
+	-- Normal buttons ScreenGui
+	G2L["42"].Enabled = MenuVisible
+end)
+
+---------------------------------------------------
+-- Close button
+---------------------------------------------------
+
+CloseButton.MouseButton1Click:Connect(function()
+	-- Main menu
+	G2L["2"].Visible = false
+
+	-- Section buttons ScreenGui
+	G2L["23"].Enabled = false
+
+	-- Normal buttons ScreenGui
+	G2L["42"].Enabled = false
+end)
+
+
+
+---------------------------------------------------
+-- JEWHUB SECTION SYSTEM (FULL FIXED VERSION)
+---------------------------------------------------
+
+local currentSection = 1
+
+---------------------------------------------------
+-- SETTINGS (EDIT THESE IF YOU WANT)
+---------------------------------------------------
+
+local NORMAL_COLOR = Color3.fromRGB(255, 255, 255)
+local ACTIVE_COLOR = Color3.fromRGB(0, 255, 0)
+
+---------------------------------------------------
+-- ACTION STORAGE (EDIT YOUR FUNCTIONS HERE)
+---------------------------------------------------
+
+local ButtonActions = {
+	[1] = {[1]=nil,[2]=nil,[3]=nil,[4]=nil,[5]=nil},
+	[2] = {[1]=nil,[2]=nil,[3]=nil,[4]=nil,[5]=nil},
+	[3] = {[1]=nil,[2]=nil,[3]=nil,[4]=nil,[5]=nil},
+	[4] = {[1]=nil,[2]=nil,[3]=nil,[4]=nil,[5]=nil},
+	[5] = {[1]=nil,[2]=nil,[3]=nil,[4]=nil,[5]=nil},
+	[6] = {[1]=nil,[2]=nil,[3]=nil,[4]=nil,[5]=nil},
+}
+
+---------------------------------------------------
+-- HELPERS
+---------------------------------------------------
+
+local function getSection(i)
+	return G2L["23"]:FindFirstChild("sectionbutton"..i)
 end
 
--- Tabs
-local InfoPage = CreateTab("Jewish Info", 1)
-local MovementPage = CreateTab("Jewish Movement", 2)
-local AllahPage = CreateTab("Allah Akbar", 3)
-local TerrorPage = CreateTab("Terrorism", 4)
-local EwPage = CreateTab("jewish meat beaters", 5)
-
--- Jewish Info Content
-local CreditText = Instance.new("TextLabel", InfoPage)
-CreditText.Size = UDim2.new(0.8, 0, 0, 80)
-CreditText.Position = UDim2.new(0.1, 0, 0.4, 0)
-CreditText.BackgroundTransparency = 1
-CreditText.Font = Enum.Font.FredokaOne
-CreditText.TextColor3 = Color3.new(1, 1, 1) -- WIT
-CreditText.TextSize = 20
-CreditText.TextWrapped = true
-CreditText.Text = "Made by GeorgeCooperTheReal (Keesert) Shout out to OmegaJew, and PenisJew."
-CreditText.ZIndex = 10
-local CrStroke = Instance.new("UIStroke", CreditText)
-CrStroke.Color = Color3.new(1, 0, 0)
-CrStroke.Thickness = 3
-
--- Styled Input Helper (Voor Movement)
-local function AddStyledInput(parent, labelText, placeholder, yPos, bgColor)
-    local lbl = Instance.new("TextLabel", parent)
-    lbl.Text = labelText
-    lbl.Font = Enum.Font.FredokaOne
-    lbl.TextSize = 18
-    lbl.TextColor3 = Color3.new(1,1,1)
-    lbl.Position = UDim2.new(0.1, 0, yPos, -25)
-    lbl.Size = UDim2.new(0.8, 0, 0, 20)
-    lbl.BackgroundTransparency = 1
-    lbl.ZIndex = 10
-    Instance.new("UIStroke", lbl).Color = Color3.new(1,0,0)
-
-    local inp = Instance.new("TextBox", parent)
-    inp.PlaceholderText = placeholder
-    inp.PlaceholderColor3 = Color3.fromRGB(200, 200, 200)
-    inp.Position = UDim2.new(0.1, 0, yPos, 0)
-    inp.Size = UDim2.new(0.8, 0, 0, 35)
-    inp.BackgroundColor3 = bgColor
-    inp.TextColor3 = Color3.new(1, 1, 1) -- WITTE TEKST
-    inp.Font = Enum.Font.FredokaOne
-    inp.TextSize = 18
-    inp.Text = ""
-    inp.ZIndex = 10
-    Instance.new("UICorner", inp)
-    local st = Instance.new("UIStroke", inp)
-    st.Color = Color3.new(1,0,0)
-    st.Thickness = 4
-    return inp
+local function getButton(i)
+	return G2L["42"]:FindFirstChild("button"..i)
 end
 
-local SpeedInp = AddStyledInput(MovementPage, "SPEED", "Enter Speed...", 0.35, Color3.fromRGB(0, 56, 184))
-local JumpInp = AddStyledInput(MovementPage, "JUMP POWER", "Enter Jump...", 0.7, Color3.fromRGB(0, 56, 184))
+---------------------------------------------------
+-- HIGHLIGHT SYSTEM
+---------------------------------------------------
 
--- Styled Button Helper (Voor Acties)
-local function CreateStyledButton(parent, text, yPos, url)
-    local btn = Instance.new("TextButton", parent)
-    btn.Text = text:upper()
-    btn.Font = Enum.Font.FredokaOne
-    btn.TextSize = 18
-    btn.TextColor3 = Color3.new(1, 1, 1) -- WITTE TEKST
-    btn.BackgroundColor3 = Color3.fromRGB(0, 56, 184)
-    btn.Size = UDim2.new(0.8, 0, 0, 45)
-    btn.Position = UDim2.new(0.1, 0, yPos, 0)
-    btn.ZIndex = 10
-    Instance.new("UICorner", btn)
-    local bStroke = Instance.new("UIStroke", btn)
-    bStroke.Color = Color3.new(1, 0, 0)
-    bStroke.Thickness = 4
-    btn.MouseButton1Click:Connect(function() loadstring(game:HttpGet(url))() end)
+local function updateHighlight()
+	for i = 1, 6 do
+		local section = getSection(i)
+
+		if section then
+			if i == currentSection then
+				section.BackgroundColor3 = ACTIVE_COLOR
+			else
+				section.BackgroundColor3 = NORMAL_COLOR
+			end
+		end
+	end
 end
 
-CreateStyledButton(AllahPage, "9/11 Kamikaze", 0.35, "https://raw.githubusercontent.com/SVG-CARLOS/I-spent-soo-much-time-making-this-script-that-I-cant-make-a-good-title/refs/heads/main/Invisfling")
-CreateStyledButton(AllahPage, "Osama Bin WALK", 0.6, "https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt")
-CreateStyledButton(TerrorPage, "Jewish Ceremony", 0.4, "https://raw.githubusercontent.com/chesslovers69/Super-ring-parts-v6/refs/heads/main/Bylukaslol")
-CreateStyledButton(EwPage, "Jerk4Kirk (r6)", 0.35, "https://pastefy.app/wa3v2Vgm/raw")
-CreateStyledButton(EwPage, "Jerk4Kirk (r15)", 0.6, "https://pastefy.app/YZoglOyJ/raw")
+---------------------------------------------------
+-- SWITCH SECTION
+---------------------------------------------------
 
--- Title (JEW HUB)
-local TitleCon = Instance.new("Frame", ContentFrame)
-TitleCon.BackgroundTransparency = 1
-TitleCon.Position = UDim2.new(0, 0, 0, 10)
-TitleCon.Size = UDim2.new(1, 0, 0, 45)
-TitleCon.ZIndex = 10
-Instance.new("UIListLayout", TitleCon).FillDirection = Enum.FillDirection.Horizontal
-TitleCon.UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-
-local titleStr = "JEW HUB"
-for i = 1, #titleStr do
-    local l = Instance.new("TextLabel", TitleCon)
-    l.Text = titleStr:sub(i,i)
-    l.Size = UDim2.new(0, 25, 1, 0)
-    l.BackgroundTransparency = 1
-    l.Font = Enum.Font.FredokaOne
-    l.TextSize = 35
-    l.TextColor3 = (i % 2 == 0) and Color3.new(1,1,1) or Color3.fromRGB(0, 56, 184)
-    local s = Instance.new("UIStroke", l)
-    s.Thickness = 4
-    s.Color = Color3.new(1,0,0)
+local function setSection(i)
+	currentSection = i
+	updateHighlight()
 end
 
--- Close Button
-CloseButton.Parent = MainFrame
-CloseButton.BackgroundColor3 = Color3.new(1, 0, 0)
-CloseButton.Position = UDim2.new(1, -35, 0, 5)
-CloseButton.Size = UDim2.new(0, 30, 0, 30)
-CloseButton.Font = Enum.Font.FredokaOne
-CloseButton.Text = "X"
-CloseButton.TextColor3 = Color3.new(1,1,1)
-CloseButton.ZIndex = 20
-Instance.new("UICorner", CloseButton)
-CloseButton.MouseButton1Click:Connect(function() ScreenGui:Destroy() end)
+---------------------------------------------------
+-- CONNECT SECTION BUTTONS
+---------------------------------------------------
 
--- Script Logic
-local function apply()
-    local hum = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid")
-    if hum then
-        if tonumber(SpeedInp.Text) then hum.WalkSpeed = tonumber(SpeedInp.Text) end
-        if tonumber(JumpInp.Text) then hum.UseJumpPower = true hum.JumpPower = tonumber(JumpInp.Text) end
-    end
+for i = 1, 6 do
+	local section = getSection(i)
+
+	if section then
+		local label = section:FindFirstChildOfClass("TextLabel")
+
+		if label then
+			label.Active = true
+
+			label.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 then
+					setSection(i)
+				end
+			end)
+		end
+	end
 end
-SpeedInp.FocusLost:Connect(function(e) if e then apply() end end)
-JumpInp.FocusLost:Connect(function(e) if e then apply() end end)
 
--- Initial State
-InfoPage.Visible = true
-SideBar:FindFirstChild("Jewish InfoBtn").Indicator.Visible = true
+---------------------------------------------------
+-- CONNECT MAIN BUTTONS (5 BUTTONS)
+---------------------------------------------------
+
+for i = 1, 5 do
+	local btn = getButton(i)
+
+	if btn then
+		local label = btn:FindFirstChildOfClass("TextLabel")
+
+		if label then
+			label.Active = true
+
+			label.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 then
+					local action = ButtonActions[currentSection][i]
+					if action then
+						action()
+					end
+				end
+			end)
+		end
+	end
+end
+
+---------------------------------------------------
+-- DEFAULT STATE
+---------------------------------------------------
+
+setSection(1)
+updateHighlight()
+
+---------------------------------------------------
+-- 🔧 YOUR EDIT AREA (EXAMPLES)
+---------------------------------------------------
+
+ButtonActions[1][4] = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/chesslovers69/Super-ring-parts-v6/refs/heads/main/Bylukaslol"))()
+end
+
+
+ButtonActions[1][3] = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/hm5650/Brick/refs/heads/main/Brick.lua"))()
+end
+
+ButtonActions[1][2] = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/SVG-CARLOS/I-spent-soo-much-time-making-this-script-that-I-cant-make-a-good-title/refs/heads/main/Invisfling"))()
+end
+
+ButtonActions[1][1] = function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
+end
+
+ButtonActions[1][5] = function()
+	loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Invisible-script-20557"))()
+end
+
+ButtonActions[3][1] = function()
+    loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))()
+    loadstring(game:HttpGet("https://pastefy.app/YZoglOyJ/raw"))()
+end
+
+ButtonActions[5][1] = function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-VFLY-AND-FLY-GUI-21056"))("https://t.me/RHOSCRIPTS")
+end
+
+ButtonActions[6][1] = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end
+
+ButtonActions[3][2] = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/3LD4D0/FE-TROLLING-PLAYER-R6-R15/6eff8792afed57458d5114478b453a6f6bce5799/Fe%20trolling%20Player%20R6%20AND%20R15"))()
+end
+---------------------------------------------------
+-- GLOBAL BUTTON CLICK SOUND SYSTEM
+---------------------------------------------------
+
+local SoundService = game:GetService("SoundService")
+
+local clickSound = Instance.new("Sound")
+clickSound.SoundId = "rbxassetid://133773862421542"
+clickSound.Volume = 1
+clickSound.Parent = SoundService
+
+-- helper function to hook buttons
+local function hookButton(guiObject)
+	if not guiObject then return end
+
+	-- works for Frames acting as buttons
+	guiObject.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			clickSound:Play()
+		end
+	end)
+end
+
+---------------------------------------------------
+-- SECTION BUTTONS (left sidebar)
+---------------------------------------------------
+hookButton(G2L["24"])
+hookButton(G2L["29"])
+hookButton(G2L["2e"])
+hookButton(G2L["33"])
+hookButton(G2L["38"])
+hookButton(G2L["3d"])
+
+---------------------------------------------------
+-- MAIN BUTTONS (inside G2L["42"])
+---------------------------------------------------
+hookButton(G2L["57"]) -- button1
+hookButton(G2L["52"]) -- button2
+hookButton(G2L["4d"]) -- button3
+hookButton(G2L["43"]) -- button4
+hookButton(G2L["48"]) -- button5
+
+---------------------------------------------------
+-- HYBRID SECTION TAB SYSTEM (OPTION 3 FIX)
+---------------------------------------------------
+
+local SoundService = game:GetService("SoundService")
+
+-- click sound (reuse-safe)
+local clickSound = Instance.new("Sound")
+clickSound.SoundId = "rbxassetid://133773862421542"
+clickSound.Volume = 1
+clickSound.Parent = SoundService
+
+---------------------------------------------------
+-- YOUR 5 MAIN BUTTONS (shared UI)
+---------------------------------------------------
+local buttons = {
+	G2L["57"], -- button1
+	G2L["52"], -- button2
+	G2L["4d"], -- button3
+	G2L["43"], -- button4
+	G2L["48"], -- button5
+}
+
+---------------------------------------------------
+-- SECTION DATA (EDIT THESE NAMES ANYTIME)
+---------------------------------------------------
+local Sections = {
+	[1] = {
+		name = "Section 1",
+		buttons = {"Terrorism Walk", "9/11 titanium plane ahh", "Jewish TOP SECRET Magnet", "JEWISH CIRCLE", "Invisible jew"}
+	},
+
+	[2] = {
+		name = "Section 2",
+		buttons = {"???", "???", "???", "???", "???"}
+	},
+
+	[3] = {
+		name = "Section 3",
+		buttons = {"JERK JEW", "Sew Jex", "???", "???", "???"}
+	},
+
+	[4] = {
+		name = "Section 4",
+		buttons = {"???", "???", "???", "???", "???"}
+	},
+
+	[5] = {
+		name = "Section 5",
+		buttons = {"Jewish Car Enchanter", "???", "???", "???", "???"}
+	},
+
+	[6] = {
+		name = "Section 6",
+		buttons = {"INFINITE YIELD", "???", "???", "???", "???"}
+	},
+}
+
+---------------------------------------------------
+-- APPLY BUTTON NAMES
+---------------------------------------------------
+local function applySection(index)
+	local data = Sections[index]
+	if not data then return end
+
+	-- update all button labels
+	for i, btn in ipairs(buttons) do
+		local label = btn:FindFirstChildOfClass("TextLabel")
+		if label and data.buttons[i] then
+			label.Text = data.buttons[i]
+		end
+	end
+
+	-- play sound
+	clickSound:Play()
+
+	-- OPTIONAL: highlight active section button (green)
+	local sectionButtons = {
+		G2L["24"],
+		G2L["29"],
+		G2L["2e"],
+		G2L["33"],
+		G2L["38"],
+		G2L["3d"],
+	}
+
+	for i, sec in ipairs(sectionButtons) do
+		if sec then
+			if i == index then
+				sec.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			else
+				sec.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			end
+		end
+	end
+end
+
+---------------------------------------------------
+-- CONNECT SECTION BUTTONS
+---------------------------------------------------
+local sectionButtons = {
+	G2L["24"],
+	G2L["29"],
+	G2L["2e"],
+	G2L["33"],
+	G2L["38"],
+	G2L["3d"],
+}
+
+for i, btn in ipairs(sectionButtons) do
+	btn.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			applySection(i)
+		end
+	end)
+end
+
+---------------------------------------------------
+-- DEFAULT LOAD
+---------------------------------------------------
+applySection(1)
+
+---------------------------------------------------
+-- BUTTON TEXT ALIGNMENT FIX (MOVE LEFT-MIDDLE)
+---------------------------------------------------
+
+local buttons = {
+	G2L["57"],
+	G2L["52"],
+	G2L["4d"],
+	G2L["43"],
+	G2L["48"],
+}
+
+for _, btn in ipairs(buttons) do
+	local label = btn:FindFirstChildOfClass("TextLabel")
+	if label then
+		-- move text slightly left-middle
+		label.Position = UDim2.new(0.05, 0, 0.25, 0)
+
+		-- align text to left (important)
+		label.TextXAlignment = Enum.TextXAlignment.Left
+
+		-- optional: keeps it visually centered vertically
+		label.TextYAlignment = Enum.TextYAlignment.Center
+	end
+end
+return G2L["1"], require;
