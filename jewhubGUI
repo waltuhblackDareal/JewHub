@@ -990,6 +990,81 @@ end
 ButtonActions[3][2] = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/3LD4D0/FE-TROLLING-PLAYER-R6-R15/6eff8792afed57458d5114478b453a6f6bce5799/Fe%20trolling%20Player%20R6%20AND%20R15"))()
 end
+
+ButtonActions[3][3] = function ()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+decalID = 7216418634
+function exPro(root)
+for _, v in pairs(root:GetChildren()) do
+if v:IsA("Decal") and v.Texture ~= "http://www.roblox.com/asset/?id="..decalID then
+v.Parent = nil
+elseif v:IsA("BasePart") then
+v.Material = "Plastic"
+v.Transparency = 0
+local One = Instance.new("Decal", v)
+local Two = Instance.new("Decal", v)
+local Three = Instance.new("Decal", v)
+local Four = Instance.new("Decal", v)
+local Five = Instance.new("Decal", v)
+local Six = Instance.new("Decal", v)
+One.Texture = "http://www.roblox.com/asset/?id="..decalID
+Two.Texture = "http://www.roblox.com/asset/?id="..decalID
+Three.Texture = "http://www.roblox.com/asset/?id="..decalID
+Four.Texture = "http://www.roblox.com/asset/?id="..decalID
+Five.Texture = "http://www.roblox.com/asset/?id="..decalID
+Six.Texture = "http://www.roblox.com/asset/?id="..decalID
+One.Face = "Front"
+Two.Face = "Back"
+Three.Face = "Right"
+Four.Face = "Left"
+Five.Face = "Top"
+Six.Face = "Bottom"
+end
+exPro(v)
+end
+end
+function asdf(root)
+for _, v in pairs(root:GetChildren()) do
+asdf(v)
+end
+end
+exPro(game.Workspace)
+asdf(game.Workspace)
+
+local s = Instance.new("Sky")
+s.Name = "Sky"
+s.Parent = game.Lighting
+local skyboxID = 7216418634
+s.SkyboxBk = "http://www.roblox.com/asset/?id="..skyboxID
+s.SkyboxDn = "http://www.roblox.com/asset/?id="..skyboxID
+s.SkyboxFt = "http://www.roblox.com/asset/?id="..skyboxID
+s.SkyboxLf = "http://www.roblox.com/asset/?id="..skyboxID
+s.SkyboxRt = "http://www.roblox.com/asset/?id="..skyboxID
+s.SkyboxUp = "http://www.roblox.com/asset/?id="..skyboxID
+game.Lighting.TimeOfDay = 12	
+
+for i, v in pairs(game.Players:GetChildren()) do
+emit = Instance.new("ParticleEmitter")
+emit.Parent = v.Character.Torso
+emit.Texture = "http://www.roblox.com/asset/?id=7216418634"
+emit.VelocitySpread = 20
+end
+for i, v in pairs(game.Players:GetChildren()) do
+emit = Instance.new("ParticleEmitter")
+emit.Parent = v.Character.Torso
+emit.Texture = "http://www.roblox.com/asset/?id=7216418634"
+emit.VelocitySpread = 20
+end
+for i, v in pairs(game.Players:GetChildren()) do
+emit = Instance.new("ParticleEmitter")
+emit.Parent = v.Character.Torso
+emit.Texture = "http://www.roblox.com/asset/?id=7216418634"
+emit.VelocitySpread = 20
+end	
+end 
+
 ---------------------------------------------------
 -- GLOBAL BUTTON CLICK SOUND SYSTEM
 ---------------------------------------------------
@@ -1011,6 +1086,18 @@ local function hookButton(guiObject)
 			clickSound:Play()
 		end
 	end)
+end
+
+ButtonActions[4][1] = function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Gi7331/scripts/main/Emote.lua"))()
+end
+
+ButtonActions[4][2] = function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Kurdish-Animation-r6-225542"))()
+end
+
+ButtonActions[4][3] = function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Guest-1337-animation-script-215976"))()
 end
 
 ---------------------------------------------------
@@ -1066,17 +1153,17 @@ local Sections = {
 
 	[2] = {
 		name = "Section 2",
-		buttons = {"???", "???", "???", "???", "???"}
+		buttons = {"???", "???", "???", "???", "EASTEREGG: Try to type 'jew' in the chat."}
 	},
 
 	[3] = {
 		name = "Section 3",
-		buttons = {"JERK JEW", "Sew Jex", "???", "???", "???"}
+		buttons = {"JERK JEW", "Sew Jex", "JENNY SPAMMER (client sided)", "???", "???"}
 	},
 
 	[4] = {
 		name = "Section 4",
-		buttons = {"???", "???", "???", "???", "???"}
+		buttons = {"Dance Fucking Jew FE", "TURBO TWEAKER FE", "Tweak anims FE", "???", "???"}
 	},
 
 	[5] = {
@@ -1179,4 +1266,102 @@ for _, btn in ipairs(buttons) do
 		label.TextYAlignment = Enum.TextYAlignment.Center
 	end
 end
+
+local player = game:GetService("Players").LocalPlayer
+local lighting = game:GetService("Lighting")
+local trigger = "jew"
+local soundId = "rbxassetid://1837428890"
+
+player.Chatted:Connect(function(msg)
+    if msg:lower() == trigger then
+        local char = player.Character
+        local hum = char and char:FindFirstChildOfClass("Humanoid")
+        local root = char and char:FindFirstChild("HumanoidRootPart")
+
+        if hum and root then
+            -- Physics Reset
+            root.Velocity = Vector3.new(0, 0, 0)
+            root.RotVelocity = Vector3.new(0, 0, 0)
+            hum.PlatformStand = true
+
+            -- Sound
+            local sound = Instance.new("Sound", root)
+            sound.SoundId = soundId
+            sound.Volume = 2
+            sound:Play()
+
+            -- Vertical Movement & Spin
+            local bv = Instance.new("BodyVelocity", root)
+            bv.Velocity = Vector3.new(0, 4, 0)
+            bv.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+
+            local bav = Instance.new("BodyAngularVelocity", root)
+            bav.AngularVelocity = Vector3.new(0, 5, 0)
+            bav.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+
+            -- Godly Light & Particles
+            local light = Instance.new("PointLight", root)
+            light.Brightness = 12
+            light.Range = 30
+            light.Color = Color3.fromRGB(255, 255, 230)
+
+            local particles = Instance.new("ParticleEmitter", root)
+            particles.LightEmission = 1
+            particles.Size = NumberSequence.new(0.5, 2.5)
+            particles.Transparency = NumberSequence.new(0, 1)
+            particles.Lifetime = NumberRange.new(1, 2.5)
+            particles.Rate = 70
+            particles.Speed = NumberRange.new(3, 8)
+            particles.Color = ColorSequence.new(Color3.fromRGB(255, 255, 255))
+
+            -- Screen Fog & Focus
+            local atmosphere = Instance.new("Atmosphere", lighting)
+            atmosphere.Density = 0.8
+            atmosphere.Color = Color3.new(1, 1, 1)
+            
+            local dof = Instance.new("DepthOfFieldEffect", lighting)
+            dof.FocusDistance = 10
+            dof.InFocusRadius = 5
+
+            -- T-Pose & Animation Stop
+            if char:FindFirstChild("Animate") then char.Animate.Disabled = true end
+            for _, track in pairs(hum:GetPlayingAnimationTracks()) do track:Stop() end
+            
+            pcall(function()
+                if hum.RigType == Enum.HumanoidRigType.R6 then
+                    char.Torso["Right Shoulder"].CurrentAngle = 1.57
+                    char.Torso["Left Shoulder"].CurrentAngle = -1.57
+                end
+            end)
+
+            -- Cleanup function
+            local function stopEffects()
+                atmosphere:Destroy()
+                dof:Destroy()
+                bv:Destroy()
+                bav:Destroy()
+                light:Destroy()
+                particles:Destroy()
+                sound:Stop()
+                hum.PlatformStand = false
+            end
+
+            -- Death detection
+            local deathConn
+            deathConn = hum.Died:Connect(function()
+                stopEffects()
+                deathConn:Disconnect()
+            end)
+
+            -- Kill Timer
+            task.delay(25, function()
+                if hum then
+                    hum.Health = 0
+                    hum:ChangeState(Enum.HumanoidStateType.Dead)
+                end
+            end)
+        end
+    end
+end)
+
 return G2L["1"], require;
