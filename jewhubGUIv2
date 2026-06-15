@@ -1100,6 +1100,15 @@ ButtonActions[4][3] = function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Guest-1337-animation-script-215976"))()
 end
 
+ButtonActions[5][2] = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JustSomeGuest/Scripts/main/Init.luau"))()
+Init.PolariaRM()
+end
+
+ButtonActions[5][3] = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqv1/free-gamepass-by-GioBolqv1-/refs/heads/main/gamepass.lua"))()
+end
+
 ---------------------------------------------------
 -- SECTION BUTTONS (left sidebar)
 ---------------------------------------------------
@@ -1153,7 +1162,7 @@ local Sections = {
 
 	[2] = {
 		name = "Section 2",
-		buttons = {"???", "???", "???", "???", "EASTEREGG: Try to type 'jew' in the chat."}
+		buttons = {"???", "???", "???", "EASTEREGG: type 'my neck hurts' in the chat. ", "EASTEREGG: Try to type 'jew' in the chat."}
 	},
 
 	[3] = {
@@ -1168,7 +1177,7 @@ local Sections = {
 
 	[5] = {
 		name = "Section 5",
-		buttons = {"Jewish Car Enchanter", "???", "???", "???", "???"}
+		buttons = {"Jewish Car Enchanter", "Break into fucking epstein files", "Fucking gamepass stealer (some games)", "???", "???"}
 	},
 
 	[6] = {
@@ -1318,6 +1327,104 @@ player.Chatted:Connect(function(msg)
             local atmosphere = Instance.new("Atmosphere", lighting)
             atmosphere.Density = 0.8
             atmosphere.Color = Color3.new(1, 1, 1)
+            
+            local dof = Instance.new("DepthOfFieldEffect", lighting)
+            dof.FocusDistance = 10
+            dof.InFocusRadius = 5
+
+            -- T-Pose & Animation Stop
+            if char:FindFirstChild("Animate") then char.Animate.Disabled = true end
+            for _, track in pairs(hum:GetPlayingAnimationTracks()) do track:Stop() end
+            
+            pcall(function()
+                if hum.RigType == Enum.HumanoidRigType.R6 then
+                    char.Torso["Right Shoulder"].CurrentAngle = 1.57
+                    char.Torso["Left Shoulder"].CurrentAngle = -1.57
+                end
+            end)
+
+            -- Cleanup function
+            local function stopEffects()
+                atmosphere:Destroy()
+                dof:Destroy()
+                bv:Destroy()
+                bav:Destroy()
+                light:Destroy()
+                particles:Destroy()
+                sound:Stop()
+                hum.PlatformStand = false
+            end
+
+            -- Death detection
+            local deathConn
+            deathConn = hum.Died:Connect(function()
+                stopEffects()
+                deathConn:Disconnect()
+            end)
+
+            -- Kill Timer
+            task.delay(25, function()
+                if hum then
+                    hum.Health = 0
+                    hum:ChangeState(Enum.HumanoidStateType.Dead)
+                end
+            end)
+        end
+    end
+end)
+
+local player = game:GetService("Players").LocalPlayer
+local lighting = game:GetService("Lighting")
+local trigger = "my neck hurts"
+local soundId = "rbxassetid://97688019392193"
+
+player.Chatted:Connect(function(msg)
+    if msg:lower() == trigger then
+        local char = player.Character
+        local hum = char and char:FindFirstChildOfClass("Humanoid")
+        local root = char and char:FindFirstChild("HumanoidRootPart")
+
+        if hum and root then
+            -- Physics Reset
+            root.Velocity = Vector3.new(0, 0, 0)
+            root.RotVelocity = Vector3.new(0, 0, 0)
+            hum.PlatformStand = true
+
+            -- Sound
+            local sound = Instance.new("Sound", root)
+sound.SoundId = soundId
+sound.Volume = 2
+sound.Looped = true
+sound:Play()
+
+            -- Vertical Movement & Spin
+            local bv = Instance.new("BodyVelocity", root)
+            bv.Velocity = Vector3.new(0, 4, 0)
+            bv.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+
+            local bav = Instance.new("BodyAngularVelocity", root)
+            bav.AngularVelocity = Vector3.new(0, 40, 0)
+            bav.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+
+            -- Godly Light & Particles
+            local light = Instance.new("PointLight", root)
+            light.Brightness = 12
+            light.Range = 30
+            light.Color = Color3.fromRGB(255, 0, 0)
+
+            local particles = Instance.new("ParticleEmitter", root)
+            particles.LightEmission = 1
+            particles.Size = NumberSequence.new(0.5, 2.5)
+            particles.Transparency = NumberSequence.new(0, 1)
+            particles.Lifetime = NumberRange.new(1, 2.5)
+            particles.Rate = 70
+            particles.Speed = NumberRange.new(3, 8)
+            particles.Color = ColorSequence.new(Color3.fromRGB(255, 0, 0))
+
+            -- Screen Fog & Focus
+            local atmosphere = Instance.new("Atmosphere", lighting)
+            atmosphere.Density = 0.8
+            atmosphere.Color = Color3.new(255, 0, 0)
             
             local dof = Instance.new("DepthOfFieldEffect", lighting)
             dof.FocusDistance = 10
